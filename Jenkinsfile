@@ -170,7 +170,7 @@ pipeline {
                 }
             }
             steps {
-				withSonarQubeEnv('<SonarQube_Name>') {
+				withSonarQubeEnv('propel-sonar-docker') {
 				// requires SonarQube Scanner for Maven 3.2+
 				sh 'mvn -s settings.xml org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar'
 				}
